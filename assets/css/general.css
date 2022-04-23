@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../img/Rectangle 1.svg");
+    background-repeat: repeat;
+    background-color: #B9C6FF;
+    background-size: 55px;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+    max-height: 100vh;
+}
+#banner.show{
+    display: grid;
+}
+#banner{
+    display: none;
+    grid-template-columns: 1fr auto;
+    position: fixed;
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+    background: #fff;
+    border: 5px solid;
+    padding: 6px 20px;
+    font-family: monospace;
+    font-size: 13pt;
+    flex-wrap: nowrap;
+    font-weight: bold;
+}
+#banner p{
+    white-space: nowrap;
+}
+.main-banner{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    gap: 30px;
+    grid-auto-rows: min-content;
+    padding: 0 24px;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 60pt;
+    padding: 20px 40px;
+    background: #ffffff;
+    border: 9px solid;
+    align-self: center;
+    justify-self: center;
+    text-shadow: 6px 6px #7586cb;
+    color: #000000;
+    box-shadow: 15px 15px;
+    margin-top: max(12%, 80px);
+    cursor: pointer;
+    user-select: none;
+}
+.contenedor-comming p {
+    font-family: monospace;
+    animation: blink 1.5s 1s ease-in-out forwards infinite alternate;
+}
+.contenedor-comming {
+    font-size: 20pt;
+    align-self: center;
+    justify-self: center;
+    background: #FF9F1F;
+    border: 4px solid;
+    padding: 8px 20px;
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#cookies-disclimer {
+    display: none;
+    font-family: monospace;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    grid-template-columns: 1fr auto;
+    max-width: min(437px,calc(100% - 60px));
+    background: #fff;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border: 4px solid;
+    gap: 10px;
+}
+#cookies-disclimer.show{
+    display: grid;
+    animation: left .5s 1ms ease-in-out forwards;
+}
+@keyframes left {
+    0%{
+        right: -10px;
+        opacity: 0;
+    }
+    100%{
+        right: 30px;
+        opacity: 1;
+    }
+}
+#cookies-disclimer button{
+    font-family: monospace;
+    align-self: flex-end;
+    padding: 6px 12px;
+    background: #FFA3D7;
+    border: 3px solid;
+
+}
+#botton-cerrar-cookies {
+    justify-self: flex-end;
+}
+#rihanna-cookie {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 216%;
+    left: -0px;
+}
+#rihanna-cookie.andando {
+    animation: andar .5s ease-in-out infinite, goToCookie 2s linear forwards;
+}
+@keyframes andar {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 6px;
+    }
+}
+@keyframes goToCookie {
+    0%{
+        left: -0px;
+    }
+    100%{
+        left: -107px;
+    }
+}
+#icono-cookie{
+    position: relative;
+}
+img.blink {
+    width: 60px;
+    position: absolute;
+}
+
+section {
+    padding: 0 24px;
+}
+
+div#calendar-day {
+    background: #fff;
+    border: 6px solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+section {
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+}
+
+#calendar-day {
+    background: #fff;
+    border: 6px solid;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    box-shadow: 15px 15px;
+    gap: 10px;
+}
+#calendar-day>*{
+    pointer-events: none;
+}
+
+.evento {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: monospace;
+    font-size: 12pt;
+    padding: 10px 20px;
+    border: 4px solid;
+    background: #FFA3D7;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 15px;
+    font-size: 30pt;
+}
+.container-horas {
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+    grid-template-rows: auto 6px auto;
+}
+.center{
+    text-align: center;
+}
+.nombre-evento {
+    font-size: 20pt;
+    font-weight: bold;
+}
+.contenedor-texto {
+    overflow: hidden;
+}
+.contenedor-movimiento{
+    display: flex;
+    gap: 30px;
+    width: 400%;
+}
+#banner.show .contenedor-movimiento {
+    animation: mover-banner 20s linear infinite;
+}
+#banner.show:hover .contenedor-movimiento{
+    animation: mover-banner 50s linear infinite;
+}
+.contenedor-parrafo {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.banera-ucrania {
+    height: 100%;
+    display: grid;
+    width: 30px;
+    border: 2px solid;
+}
+@keyframes mover-banner {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-75%);
+    }
+}
